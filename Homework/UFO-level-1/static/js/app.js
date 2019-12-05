@@ -17,7 +17,7 @@ data.forEach(function(alienData) {
   });
 
 const button = d3.select("#filter-btn");
-button.on("click", function(filterbtn) {
+button.on("click", function() {
       // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
       // Get the value property of the input element
@@ -25,6 +25,8 @@ button.on("click", function(filterbtn) {
     console.log(inputValue);
     var filteredData = data.filter(x => x.datetime === inputValue);
     console.log(filteredData);
+    
+    tbody.html("");
 
     filteredData.forEach(function(filteredAliens) {
         var row = tbody.append("tr");
