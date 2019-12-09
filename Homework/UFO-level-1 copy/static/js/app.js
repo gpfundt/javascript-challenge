@@ -24,6 +24,7 @@ timebutton.on("click", function() {
     var inputValue = inputElement.property("value");
     console.log(inputValue);
     var filteredData = data.filter(x => x.datetime === inputValue);
+    //tableData = data.filter(x=>x.datetime === inputValue);
     console.log(filteredData);
     
     tbody.html("");
